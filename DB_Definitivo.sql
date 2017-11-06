@@ -265,15 +265,10 @@ CREATE TABLE `utente` (
 
 INSERT INTO `utente` (`nome`, `cognome`, `email`, `password`, `avatar`, `data_registrazione`, `data_conferma_registrazione`, `tipo_utente`) VALUES
 ('admin', 'admin', 'admin@admin.it', '$s0$41010$KSM3XQs0fnYr3CwWkl6ceA==$7F3xyDOjLRxgpGQlpeZAto66Jb0OEtc/EKQF7ruzO2g=', 'avatar/default.png', '2017-09-16', NULL, 0),
-('Alessandro', 'Buono', 'alessandro.buono@gmail.com', 'alessandro', NULL, '2017-09-18', NULL, 2),
-('Jshd', 'Hdhdh', 'bdhdh@hdhd.com', '$s0$41010$HB/W5Xmw6GoQeCFX6nNhfQ==$Zf+xIqfavpwgM8pqiuZ/CPyk5a+KBO73SI0K4ZRGfzE=', 'avatar/default.png', '2017-09-20', NULL, 1),
-('Gdhd', 'Bshs', 'bshhs@hdhd.com', '$s0$41010$RHHdpoO9GADLPuyX32Ndmw==$jr6AKqiMbACNhdDZVtV1Xp9mUgxAypLSXEH08GyBPNo=', 'avatar/default.png', '2017-09-20', NULL, 1),
-('Shhdhs', 'Bshhs', 'bshsuys@hdhd.com', '$s0$41010$7cV6SB2IO5g6oUbqlpmyJg==$/aO68S5l+7jT3Wlb0L4lCKONBMHinRPDWQg7GncOHmc=', 'avatar/default.png', '2017-09-20', NULL, 1),
 ('Matteo', 'Dalponte', 'matteo.dalponte@studenti.unitn.it', '$s0$41010$n7MxZto2Y3e1Q5oqX1fJRg==$qKTf4FsgLnexmrcgE0p0h5qLRR0+4TOJgg/3dp0Dx2c=', 'avatar/default.png', '2017-09-20', '2017-09-20', 1),
 ('Random', 'random', 'random@gmail.com', '$s0$41010$WlpO0ANvvf56aYqwhJZjpw==$ahmuANSPGVsRscZ8teIINnA4b1PUxPQ0nx0Ky0LjvcA=', 'avatar/default.png', '2017-10-21', NULL, 1),
 ('Simone', 'Bernabè', 'simoberny@gmail.com', '$s0$41010$cYl+r/uOp9O/fo7gtwTqbg==$pNjBoFJ9JKok6C7kDtxWtLkjrdNljyGH7gd7BuL2wEI=', 'avatar/default.png', '2017-09-16', '2017-09-28', 0),
-('Simone', 'Bernabè', 'simoberny@live.it', '$s0$41010$DJAZsRvFTlJKDSA8jYps5A==$bF+nf1qeUU18Qz7gC13qGgfL8Rf5sUIT4gpHncmE3OA=', 'avatar/default.png', '2017-09-19', NULL, 1),
-('Valerio', 'Oss', 'valerio.oss@gmail.com', 'valerio', 'avatar/default.png', '2017-09-18', NULL, 2),
+('Valerio', 'Oss', 'valerio.oss@gmail.com', '$s0$41010$cYl+r/uOp9O/fo7gtwTqbg==$pNjBoFJ9JKok6C7kDtxWtLkjrdNljyGH7gd7BuL2wEI=', 'avatar/default.png', '2017-09-18', NULL, 2),
 ('Fabio', 'La  Torre', 'xfabiox94@gmail.com', '$s0$41010$MW+nybkxwG3rXQHpKvP7/g==$av7Gawkh+Lzx5I4rhKslN2JWsQGPKvYvLOmr3tLMrFQ=', 'avatar/default.png', '2017-09-21', NULL, 1);
 
 -- --------------------------------------------------------
