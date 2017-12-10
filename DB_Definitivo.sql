@@ -102,20 +102,40 @@ INSERT INTO `categoria` (`nome_categoria`, `desc_categoria`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Province
+--
+
+CREATE TABLE `provincia` (
+  `nome` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dump dei dati per la tabella `provincia`
+--
+
+INSERT INTO `provincia` (`nome`) VALUES
+('Trentino'),
+('Veneto');
+('Valle Daosta');
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `citta`
 --
 
 CREATE TABLE `citta` (
   `nome` varchar(255) NOT NULL
+  `provincia` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dump dei dati per la tabella `citta`
 --
 
-INSERT INTO `citta` (`nome`) VALUES
-('Pergine Valsugana'),
-('Trento');
+INSERT INTO `citta` (`nome`,`provincia`) VALUES
+('Pergine Valsugana','Veneto'),
+('Trento','Trentino');
 
 -- --------------------------------------------------------
 
@@ -336,7 +356,7 @@ ALTER TABLE `categoria`
 -- Indici per le tabelle `citta`
 --
 ALTER TABLE `citta`
-  ADD PRIMARY KEY (`nome`);
+  ADD PRIMARY KEY (`nome`,`provincia`);
 
 --
 -- Indici per le tabelle `coordinate`
@@ -427,6 +447,12 @@ ALTER TABLE `segnalazione`
 ALTER TABLE `acquisto`
   ADD CONSTRAINT `acquisto_ibfk_1` FOREIGN KEY (`id_ordine`) REFERENCES `ordine` (`id_ordine`),
   ADD CONSTRAINT `acquisto_ibfk_2` FOREIGN KEY (`id_articolo`) REFERENCES `articolo` (`id_articolo`);
+  
+  --
+-- Limiti per la tabella `citta`
+--
+ALTER TABLE `citta`
+    ADD CONSTRAINT `citta_ibfk_1` FOREIGN KEY (`provincia`) REFERENCES `provincia` (`nome`) ON DELETE CASCADE ON UPDATE CASCADE
 
 --
 -- Limiti per la tabella `articolo`
